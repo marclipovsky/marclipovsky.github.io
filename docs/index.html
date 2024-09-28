@@ -188,21 +188,6 @@
     ></noscript>
     <!-- End Google Tag Manager (noscript) -->
 
-    <!-- Google tag (gtag.js) -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-BFQ6QB4SXD"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-
-      gtag("config", "G-BFQ6QB4SXD");
-    </script>
-
     <!-- Particle Background -->
     <svg id="particle-bg"></svg>
 
@@ -383,29 +368,6 @@
         const newHeight = window.innerHeight;
         svg.attr("width", newWidth).attr("height", newHeight);
       });
-    </script>
-
-    <script>
-      // Function to handle link clicks
-      function trackLinkClicks(event) {
-        var linkUrl = this.href;
-        var isOutbound = !linkUrl.includes(window.location.hostname);
-
-        // Send event to Google Analytics
-        gtag("event", "click", {
-          event_category: "link",
-          event_label: linkUrl,
-          transport_type: "beacon",
-        });
-      }
-
-      // Get all links on the page
-      var links = document.getElementsByTagName("a");
-
-      // Attach event listener to each link
-      for (var i = 0; i < links.length; i++) {
-        links[i].addEventListener("click", trackLinkClicks, false);
-      }
     </script>
   </body>
 </html>
